@@ -5,18 +5,41 @@
     <section class="movie-detail-intro overlay-gradient ptb100"
         style="background: url({{ asset('images/branding/posters/movie-detail-bg.webp') }});">
     </section>
+    
     <!-- =============== END OF MOVIE DETAIL INTRO =============== -->
 
 
 
-    <!-- =============== START OF MOVIE DETAIL INTRO 2 =============== -->
-    <section class="movie-detail-intro2">
+    <!-- =============== START OF MOVIE DETAIL INTRO 2 =============== -->  
+    <section class="movie-detail-intro2" style="position: relative; z-index: 2; margin-top: -500px;">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-
-                    <div class="movie-poster">
-                        <img src="{{ asset('storage/' . $movie->image) }}" style="height: 440px" alt="">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="movie-poster" style="position: relative; z-index: 3;">
+                                <img src="{{ asset('storage/' . $movie->image) }}" style="height: 440px; box-shadow: 0 8px 24px rgba(0,0,0,0.2);" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-6 d-flex align-items-center justify-content-center" style="position: relative; z-index: 3;">
+                            @if($movie->trailer)
+                                @php
+                                    preg_match('/(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/ ]{11})/', $movie->trailer, $matches);
+                                    $youtubeId = $matches[1] ?? null;
+                                @endphp
+                                @if($youtubeId)
+                                    <div class="embed-responsive embed-responsive-16by9" style="width:100%; max-width:720px;">
+                                        <iframe class="embed-responsive-item"
+                                            src="https://www.youtube.com/embed/{{ $youtubeId }}"
+                                            allowfullscreen></iframe>
+                                    </div>
+                                @else
+                                    <div class="alert alert-warning">Trailer tidak valid.</div>
+                                @endif
+                            @else
+                                <div class="alert alert-secondary">Trailer belum tersedia.</div>
+                            @endif
+                        </div>
                     </div>
 
 
