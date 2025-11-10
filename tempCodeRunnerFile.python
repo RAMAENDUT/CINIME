@@ -1,0 +1,17 @@
+import bcrypt
+
+# Password asli
+password = b"123anjay"
+
+# Membuat salt dan hash
+salt = bcrypt.gensalt()
+hashed = bcrypt.hashpw(password, salt)
+
+print("Hash bcrypt:", hashed)
+
+# Verifikasi password
+input_user = b"123anjay"
+if bcrypt.checkpw(input_user, hashed):
+    print("✅ Password cocok")
+else:
+    print("❌ Password salah")
