@@ -47,7 +47,14 @@
         'name'=>'start_time',
         'label'=>'Waktu Main',
         'classes'=>'col-6',
-        'value'=>$show->start_time->format('H:i'),
+        'value'=>old('start_time',$show->start_time?->format('H:i')),
+        'required'=>'required',
+        ])
+        @include('components.form-time',[
+        'name'=>'end_time',
+        'label'=>'Waktu Selesai',
+        'classes'=>'col-6',
+        'value'=>old('end_time',$show->end_time?->format('H:i')),
         'required'=>'required',
         ])
     

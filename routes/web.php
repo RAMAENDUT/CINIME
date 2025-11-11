@@ -36,6 +36,26 @@ Route::get('/', function () {
     ]);
 })->name('home');
 
+// Temporary debug route to inspect the authenticated user's role (remove in production)
+Route::get('/_debug/whoami', function () {
+    $user = auth()->user();
+    if (! $user) {
+        return response()->json(null);
+    }
+
+    $role = $user->role;
+    return response()->json([
+        'id' => $user->id,
+        'username' => $user->username,
+        'role_id' => $user->role_id,
+        'role' => $role ? [
+            'id' => $role->id,
+            'code' => $role->code,
+            'title' => $role->title,
+        ] : null,
+    ]);
+})->middleware('auth');
+
 Route::get('/contact', function () {
     return view('pages.contact-us');
 })->name('contact-us');

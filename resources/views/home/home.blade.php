@@ -4,8 +4,13 @@
     @include('home.hero-slider')
 
     <!-- =============== START OF TOP MOVIES SECTION =============== -->
-    <section class="top-movies2">
+    <section class="top-movies2 mt-4">
         <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-7 text-center">
+                    <h2 class="title">Top Rated Anime</h2>
+                </div>
+            </div>
             <div class="row">
                 @php
                     $containerClasses = ['col-sm-6 col-xs-12', 'col-sm-6 d-none d-sm-block', 'd-none d-lg-block', 'd-none d-lg-block'];

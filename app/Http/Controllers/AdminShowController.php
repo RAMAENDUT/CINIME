@@ -6,6 +6,7 @@ use App\Models\Movie;
 use App\Models\Room;
 use App\Models\Show;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Validation\Rule;
 
 class AdminShowController extends Controller
@@ -37,6 +38,13 @@ class AdminShowController extends Controller
         ]);
 
         $attr['remaining_seats'] = Room::find($attr['room_id'])->size;
+
+        // Debug: log incoming request and validated attributes to help diagnose
+        // cases where movie_id is not what the user selected in the form.
+        Log::info('AdminShowController@store request', [
+            'all' => $request->all(),
+            'validated' => $attr,
+        ]);
 
         $show = Show::create($attr);
 
@@ -73,6 +81,13 @@ class AdminShowController extends Controller
         ]);
 
         unset($attr['room']);
+
+        // Debug: log incoming request and validated attributes for update
+        Log::info('AdminShowController@update request', [
+            'all' => $request->all(),
+            'validated' => $attr,
+            'show_id' => $show->id,
+        ]);
 
         $show->update($attr);
 

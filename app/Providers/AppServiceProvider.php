@@ -27,11 +27,13 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         Gate::define('admin', function (User $user) {
-            return $user->role->code === Role::ADMIN_CODE;
+            // guard against missing relation and cast code to int (DB may return string)
+            return $user->role && ((int) $user->role->code === Role::ADMIN_CODE);
         });
 
         Gate::define('manager', function (User $user) {
-            return $user->role->code === Role::MANAGER_CODE;
+            // guard against missing relation and cast code to int (DB may return string)
+            return $user->role && ((int) $user->role->code === Role::MANAGER_CODE);
         });
     }
 }

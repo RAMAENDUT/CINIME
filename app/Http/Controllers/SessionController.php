@@ -13,7 +13,7 @@ class SessionController extends Controller
         ]);
 
         // validate credentials
-        if (auth()->attempt($credentials, isset($credentials['remember-me']) && $credentials['remember-me'] === 'yes')) {
+        if (auth()->attempt($credentials)) {
             // regenerate session for security and redirect to intended page
             request()->session()->regenerate();
             return redirect()->intended()->with(['flash' => 'success', 'message' => 'Signed in!']);

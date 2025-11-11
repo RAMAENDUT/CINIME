@@ -43,9 +43,6 @@
 </div>
 @endif
 
-    <div class="mt-3">
-    <a class="btn btn-success" href="{{ route('admin.users.create') }}">Add User</a>
-</div>
 
 @include('components.flash-message')
 @endsection

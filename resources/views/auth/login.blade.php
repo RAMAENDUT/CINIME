@@ -37,12 +37,7 @@
                                         placeholder="Your Password *" required />
                                 </div>
 
-                                <div class="form-group">
-                                    <div class="checkbox pad-bottom-10">
-                                        <input id="remember-me" type="checkbox" name="remember-me" value="yes">
-                                        <label for="remember-me">Ingat saya</label>
-                                    </div>
-                                </div>
+                                {{-- remember-me removed: feature not used in this build --}}
 
                                 @include('components.error-message', ['field_name' => 'email'])
                                 <div class="form-group">

@@ -6,6 +6,7 @@ use App\Models\Movie;
 use App\Models\Role;
 use App\Models\Show;
 use App\Models\User;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class AdminUserController extends Controller
@@ -17,11 +18,13 @@ class AdminUserController extends Controller
         $num_of_shows = Show::all()->count();
         $num_of_movies = Movie::all()->count();
         $num_of_customers = $users->where('role.code', Role::CUSTOMER_CODE)->count();
+        $upcoming_shows_count = Show::whereBetween('date', [Carbon::now(), Carbon::now()->addWeek()])->count();
 
         return view('admin.dashboard', [
             'numOfShows' => $num_of_shows,
             'numOfMovies' => $num_of_movies,
             'numOfCustomers' => $num_of_customers,
+            'showsNextWeek' => $upcoming_shows_count,
         ]);
     }
 

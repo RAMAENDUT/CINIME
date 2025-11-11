@@ -32,6 +32,8 @@
                         data-frames='[{"delay":1000,"speed":2000,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:0;s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
                         style="z-index: 5; color: #fff; font-weight: 900;">
 
+                    
+
                         <!-- ===== START OF SEARCH FORM ===== -->
                         <form id="search-form-1" method="GET" action="{{ route('movies.index') }}">
                             <div class="row justify-content-center">
@@ -49,25 +51,6 @@
 
                     </div>
 
-
-                    <!-- LAYER NR. 3 -->
-                    <div class="tp-caption tp-resizeme text-center" data-x="center" data-hoffset="" data-y="middle"
-                        data-voffset="['100','100','80','80']" data-responsive_offset="on" data-fontsize="['16']"
-                        data-lineheight="['22']" data-whitespace="nowrap"
-                        data-frames='[{"delay":1000,"speed":2000,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:0;s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
-                        style="z-index: 5; color: #fff; font-weight: 400;">
-                        Lihat Top Rated Anime Di Sini!
-                    </div>
-
-
-                    <!-- LAYER NR. 4 -->
-                    <div class="tp-caption tp-resizeme" data-x="[730, 630, 520, 370]" data-hoffset="" data-y="middle"
-                        data-voffset="['115','115','90','500']" data-responsive_offset="on" data-fontsize="['16']"
-                        data-lineheight="['22']" data-whitespace="nowrap"
-                        data-frames='[{"delay":1000,"speed":2000,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:0;s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
-                        style="z-index: 5; color: #fff; font-weight: 400;">
-                        <img src="{{ asset('images/other/banner-arrow.png') }}" alt="">
-                    </div>
                 </li>
 
             </ul>
