@@ -109,15 +109,9 @@ GO
 
 SET IDENTITY_INSERT users ON;
 INSERT INTO users (id, role_id, username, email, password, first_name, last_name, created_at, updated_at) VALUES
-(69, 3, 'RAMAENDUT', 'umbararamadhan@gmail.com', '$2y$10$sJSaNmhnFy6aepZuPBGbz.LfLGQbyLfJ.kwdUQlPCgzanJ4/cpzru', 'RAMA', 'ENDUT', '2024-12-26 09:28:47', '2024-12-26 09:28:47'),
-(70, 2, 'RAMAENDUT1', 'umbararamadhan1@gmail.com', '$2y$10$aC2RW5ki85dLWKZNtQXtMerwsFwQAKBXKuTGz6GU10s36Q./IRWNS', 'RAMA', 'ENDUT', '2024-12-26 09:30:23', '2024-12-26 09:37:55'),
-(71, 3, 'RAMAENDUT5', 'umbararamadhan5@gmail.com', '$2y$10$QvDnT96eKEt9pmvaoWb81O5hB/HssxMpee3D1We6oXDY.ngTWybD2', 'Ramadhan', 'Umbara', '2024-12-26 09:39:44', '2024-12-26 09:39:44'),
-(72, 3, 'bahlil', 'looring@gmail.com', '$2y$10$iDmAWO82Vl9fJ7BXNyR9y.9uhm.PG/owEoHOrOn/7bIlWCuN9nbDe', 'ismet', 'kumar', '2025-07-16 06:51:49', '2025-11-10 15:16:28'),
-(88, 1, 'anjay', 'anjay@anjay.com', '$2b$12$ZczZpbyaUeYKStBMz3NJf.unHMsJymcIti5.W5m3BkgwMj2DMu4E6', 'an', 'jay', NULL, NULL),
-(89, 3, 'kumar', 'kumar@gmail.com', '$2y$10$RTRawnIhf4BFUU18jNNuMOWdDdo4c04fD9lPg5s5OgWHxOcYM7dqa', 'ismet', 'kumar', '2025-11-10 12:48:59', '2025-11-10 12:48:59'),
-(93, 2, 'guga', 'guga@gug.com', '$2y$10$JaWTu9DrQkR2DieNCj5BU.o0tf9X9bUPfr5CLNjSQ0nA68csloAXC', 'gug', 'gag', '2025-11-10 15:34:44', '2025-11-10 15:34:44'),
-(94, 3, 'kontol', 'asu@gmail.com', '$2y$10$AOEqlGVyxXUPPHympC1Kle5OXK9LmXH4s7ja.WxqnQ7TIedWWoglq', 'asu', 'usa', '2025-11-10 17:56:45', '2025-11-10 17:56:45');
-SET IDENTITY_INSERT users OFF;
+(1, 1, 'anjay', 'anjay@anjay.com', '$2b$12$ZczZpbyaUeYKStBMz3NJf.unHMsJymcIti5.W5m3BkgwMj2DMu4E6', 'an', 'jay', NULL, NULL),
+(2, 3, 'kumar', 'kumar@gmail.com', '$2y$10$RTRawnIhf4BFUU18jNNuMOWdDdo4c04fD9lPg5s5OgWHxOcYM7dqa', 'ismet', 'kumar', '2025-11-10 12:48:59', '2025-11-10 12:48:59'),
+(3, 2, 'guga', 'guga@gug.com', '$2y$10$JaWTu9DrQkR2DieNCj5BU.o0tf9X9bUPfr5CLNjSQ0nA68csloAXC', 'gug', 'gag', '2025-11-10 15:34:44', '2025-11-10 15:34:44');
 GO
 
 SET IDENTITY_INSERT movies ON;
