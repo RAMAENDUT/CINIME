@@ -13,3 +13,9 @@ langkah penginstalan CINIME
     - pilih database yang digunakan lalu execute
 5. php artisan storage:link
 6. php artisan serve
+
+
+login:
+admin      ==> anjay@anjay.com pass = 123anjay
+manager    ==> guga@gug.com pass = 1234guga
+customer   ==> kumar@gmail.com pass = 123kumar
